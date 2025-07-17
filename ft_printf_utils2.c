@@ -24,6 +24,7 @@ void	printf_hex(unsigned int n, int uppercase, int *count)
 		printf_hex(n / 16, uppercase, count);
 	printf_char(base[n % 16], count);
 }
+
 void	printf_pointer(void *ptr, int *count)
 {
 	uintptr_t	n;
@@ -38,7 +39,7 @@ void	printf_pointer(void *ptr, int *count)
 	print_ptr_recursive(n, count);
 }
 
-static void print_ptr_recursive(uintptr_t n, int *count)
+static void	print_ptr_recursive(uintptr_t n, int *count)
 {
 	char	*base;
 

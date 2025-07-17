@@ -17,6 +17,7 @@ void	printf_char(char c, int *count)
 	write(1, &c, 1);
 	(*count)++;
 }
+
 void	printf_string(char *s, int *count)
 {
 	int	i;
@@ -30,6 +31,7 @@ void	printf_string(char *s, int *count)
 		i++;
 	}
 }
+
 void	printf_int(int n, int *count)
 {
 	long	num;

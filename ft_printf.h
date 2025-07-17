@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-int	ft_printf(const char *format, ...);
+int		ft_printf(const char *format, ...);
 void	process_format(const char *format, va_list *args, int *count);
 void	handle_specifier(char specifier, va_list *args, int *count);
 void	printf_char(char c, int *count);
