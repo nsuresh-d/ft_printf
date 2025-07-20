@@ -32,6 +32,13 @@ void	printf_string(char *s, int *count)
 	}
 }
 
+static void	printf_int_recursive(long n, int *count)
+{
+	if (n >= 10)
+		printf_int_recursive(n / 10, count);
+	printf_char((n % 10) + '0', count);
+}
+
 void	printf_int(int n, int *count)
 {
 	long	num;
@@ -42,9 +49,7 @@ void	printf_int(int n, int *count)
 		printf_char('-', count);
 		num = -num;
 	}
-	if (num >= 10)
-		printf_int(num / 10, count);
-	printf_char((num % 10) + '0', count);
+	printf_int_recursive(num, count);
 }
 
 void	printf_unsigned(unsigned int n, int *count)

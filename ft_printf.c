@@ -48,7 +48,7 @@ void	handle_specifier(char specifier, va_list *args, int *count)
 		printf_char(va_arg(*args, int), count);
 	else if (specifier == 's')
 		printf_string(va_arg(*args, char *), count);
-	else if (specifier == 'd')
+	else if (specifier == 'd' || specifier == 'i')
 		printf_int(va_arg(*args, int), count);
 	else if (specifier == 'u')
 		printf_unsigned(va_arg(*args, unsigned int), count);
